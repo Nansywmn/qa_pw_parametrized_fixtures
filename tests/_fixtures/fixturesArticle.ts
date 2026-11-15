@@ -5,11 +5,11 @@ import { ViewArticlePage } from '../../src/ui/pages/article/ViewArticlePage';
 import { EditArticlePage } from '../../src/ui/pages/article/EditArticlePage';
 
 export const test = base.extend<{
-  articleWithoutTags;
-  articleWithOneTag;
-  createArticlePage;
-  viewArticlePage;
-  editArticlePage;
+  articleWithoutTags: ReturnType<typeof generateNewArticleData>;
+  articleWithOneTag: ReturnType<typeof generateNewArticleData>;
+  createArticlePage: CreateArticlePage;
+  viewArticlePage: ViewArticlePage;
+  editArticlePage: EditArticlePage;
 }>({
   articleWithoutTags: async ({ logger }, use) => {
     const article = generateNewArticleData(logger);
